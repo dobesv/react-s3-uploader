@@ -1,5 +1,5 @@
 declare module 'react-s3-uploader' {
-  import { Component } from 'react';
+  import { Component, Ref } from 'react';
 
   export interface S3Response {
     signedUrl: string;
@@ -29,7 +29,7 @@ declare module 'react-s3-uploader' {
     uploadRequestHeaders?: object;
     contentDisposition?: string;
     server?: string;
-    inputRef?: (ref: HTMLInputElement) => any;
+    inputRef?: Ref<HTMLInputElement>;
     autoUpload?: boolean;
     scrubFilename?: (filename: string) => string;
     [key: string]: any;
